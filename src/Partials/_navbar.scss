@@ -1,0 +1,87 @@
+// Mixins
+@mixin listReset {
+  list-style: none;
+  display: flex;
+}
+
+@mixin linkReset {
+  text-decoration: none;
+}
+
+@mixin slowTransition {
+  transition: all 0.4 ease;
+}
+// fine mixins
+
+// Variabili
+// fine variabili
+
+nav {
+  background-color: #000;
+
+  .top-nav {
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .bottom-nav {
+    height: 80px;
+    line-height: 80px;
+  }
+
+  li {
+    display: inline-block;
+
+    a {
+      @include linkReset;
+    }
+  }
+}
+
+.top-nav ul {
+  @include listReset;
+  justify-content: flex-end;
+
+  li {
+    margin-left: 20px;
+
+    a {
+      color: grey;
+      @include slowTransition;
+
+    &:hover {
+      color: #fff;
+    }
+    }
+  }
+}
+
+.bottom-nav ul {
+  @include listReset;
+  justify-content: flex-start;
+
+  li {
+    height: 100%;
+    @include slowTransition;
+
+    a {
+      color: #fff;
+      font-size: 20px;
+      white-space: nowrap;
+      display: inline-block;
+      height: 100%;
+      padding: 0 10px;
+    }
+
+    &:not(:first-child):hover a{
+      background-color: #fff;
+      color: #000;
+    }
+  }
+
+  #logo {
+    width: 120px;
+    height: auto;
+    margin-right: 25px;
+  }
+}

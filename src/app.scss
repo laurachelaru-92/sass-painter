@@ -1,0 +1,25 @@
+//Default e import
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+@import "Partials/_navbar.scss";
+@import "Partials/_jumbotron.scss";
+// fine default e import
+
+// Variabili
+$containerWidth : 80%;
+// fine variabili
+
+// Generiche, body e container
+body {
+  background-color: red;
+}
+
+.container {
+  width: $containerWidth;
+  margin: auto;
+}
+// fine generiche, body e container
