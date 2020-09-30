@@ -5,8 +5,10 @@ margin: 0;
 padding: 0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 @import "Partials/_navbar.scss";
 @import "Partials/_jumbotron.scss";
+@import "Partials/_overview.scss";
 // fine default e import
 
 // Variabili
@@ -15,7 +17,7 @@ $containerWidth : 80%;
 
 // Generiche, body e container
 body {
-  background-color: red;
+  font-family: "Lato", sans-serif;
 }
 
 .container {

@@ -4,34 +4,88 @@
     <meta charset="utf-8">
     <title>Sass Painter</title>
     <link rel="stylesheet" href="dist/app.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
   </head>
   <body>
-    <nav>
-      <div class="container">
-        <div class="top-nav">
-          <ul>
-            <li><a href="#">Number</a></li>
-            <li><a href="#">Chat</a></li>
-            <li><a href="#">Sign in</a></li>
-            <li><a href="#">Cart</a></li>
-            <li><a href="#">English</a></li>
-          </ul>
+    <!-- Header -->
+    <header>
+      <!-- Barra di navigazione -->
+      <nav>
+        <div class="container">
+          <div class="top-nav">
+            <ul>
+              <li><a href="#"><i class="fas fa-phone-alt"></i>1-877-582-6735</a></li>
+              <li><a href="#"><i class="fas fa-comment-alt"></i>Chat</a></li>
+              <li><a href="#"><i class="fas fa-user-alt"></i>Sign in</a></li>
+              <li><a href="#"><i class="fas fa-shopping-cart"></i>Cart</a></li>
+              <li><select name="lang" id="lang-select">
+                <option value="english" selected>English</option>
+                <option value="english">Deutsch</option>
+                <option value="english">Français</option>
+
+              </select></li>
+            </ul>
+          </div>
+          <div class="bottom-nav">
+            <ul>
+              <li id="logo"><a href="#"><img src="img/logo_painter.png" alt="logo"></a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Brushes</a></li>
+              <li><a href="#">Wacom Tablets</a></li>
+              <li><a href="#">Special Offers</a></li>
+              <li><a href="#">Free Trials</a></li>
+              <li><a href="#">Business</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Learning</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="bottom-nav">
+      </nav>
+      <!-- / barra di navigazione -->
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <div class="main-text">
+          <h2>Painter Essentials 7</h2>
+          <h3>Painting software for beginners</h3>
           <ul>
-            <li id="logo"><a href="#"><img src="img/logo_painter.png" alt="logo"></a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Brushes</a></li>
-            <li><a href="#">Wacom Tablets</a></li>
-            <li><a href="#">Special Offers</a></li>
-            <li><a href="#">Free Trials</a></li>
-            <li><a href="#">Business</a></li>
-            <li><a href="#">Support</a></li>
-            <li><a href="#">Learning</a></li>
+            <li><i class="fas fa-chevron-right"></i>User friendly interface</li>
+            <li><i class="fas fa-chevron-right"></i>AI-based photo painting</li>
+            <li><i class="fas fa-chevron-right"></i>Industry acclaimed brushes</li>
+            <li><i class="fas fa-chevron-right"></i>Incredible speed</li>
+            <li><i class="fas fa-chevron-right"></i>Built-in learning</li>
           </ul>
+          <div class="btn">
+            <div class="txt">
+              <h4>Download Trial</h4>
+              <p>For Windows/Mac</p>
+            </div>
+            <i class="fas fa-download"></i>
+          </div>
+        </div>
+        <div class="buy">
+          <p>(incl. VAT)</p>
+          <h4>Download</h4>
+          <a href="#">Buy now</a>
+          <img src="img/moneyback.png" alt="logo moneyback guarantee">
         </div>
       </div>
-    </nav>
+      <!-- / jumbotron -->
+    </header>
+    <!-- / header -->
+    <section id="overview">
+      <nav>
+        <div class="container">
+          <ul>
+            <li>Overview</li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Compare</a></li>
+            <li><a href="#">TECH SPECS</a></li>
+            <li><a href="#">GALLERY</a></li>
+            <li><a href="#">LEARNING</a></li>
+          </ul>
+        </div>
+      </nav>
+    </section>
     <script src="dist/app.js" charset="utf-8"></script>
   </body>
 </html>

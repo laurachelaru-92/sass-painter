@@ -1,0 +1,33 @@
+#overview nav {
+  background-color: #E6E6E6;
+
+  ul {
+    @include listReset;
+    height: 60px;
+    line-height: 60px;
+
+    li {
+      height: 100%;
+
+      &:first-child {
+        padding: 0 30px;
+        border-bottom: 2px solid #000;
+        background-color: #fff;
+      }
+
+      a {
+        @include linkReset;
+        color: grey;
+        transition: background 0.4s ease;
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        padding: 0 30px;
+
+        &:hover {
+          background-color: #EEEEEE;
+        }
+      }
+    }
+  }
+}
