@@ -1,0 +1,13 @@
+// Mixins
+@mixin listReset {
+  list-style: none;
+  display: flex;
+}
+
+@mixin linkReset {
+  text-decoration: none;
+}
+
+@mixin slowTransition {
+  transition: all 0.4s ease;
+}

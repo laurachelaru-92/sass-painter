@@ -1,0 +1,26 @@
+#ai {
+  position: relative;
+  height: calc(#{$sectionH} + 30px);
+
+  .txt {
+    @extend %sectionTxt;
+    color: #00001a;
+
+    h2 {
+      @extend %sectionH2;
+    }
+
+    p {
+      @extend %sectionP;
+    }
+  }
+
+  img {
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: auto;
+  }
+}

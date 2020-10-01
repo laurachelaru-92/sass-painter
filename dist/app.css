@@ -4,6 +4,51 @@
   padding: 0;
 }
 
+#tools-effects h2, #grey-section .flexible-photo h2, #ai .txt h2, #overview .ideal-painting .txt h2 {
+  font-size: 35px;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+
+#grey-section .flexible-photo p, #ai .txt p, #overview .ideal-painting .txt p {
+  padding-bottom: 30px;
+  font-size: 18px;
+}
+
+#grey-section .flexible-photo, #ai .txt, #overview .ideal-painting .txt {
+  color: #fff;
+  width: 70%;
+  text-align: center;
+  margin: auto;
+  padding: 50px 0 30px 0;
+}
+
+#grey-section .row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+
+#grey-section .row .txt {
+  flex-basis: 40%;
+  color: #fff;
+}
+#grey-section .row .txt h3 {
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+#grey-section .row .txt p {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+#grey-section .row img {
+  flex-basis: 60%;
+  height: auto;
+}
+
 header nav {
   background-color: #000;
   height: 100%;
@@ -170,6 +215,9 @@ header nav li a {
   background-color: #28ACFF;
   text-transform: uppercase;
 }
+.jumbotron .buy a.buy-now:hover {
+  background-color: #4dbbff;
+}
 .jumbotron .buy img {
   position: absolute;
   top: 20px;
@@ -240,13 +288,6 @@ header nav li a {
   background-position: center center;
   position: relative;
 }
-#overview .ideal-painting .txt {
-  color: #fff;
-  width: 60%;
-  text-align: center;
-  margin: auto;
-  padding: 30px 0;
-}
 #overview .ideal-painting .txt a {
   text-decoration: none;
   color: #fff;
@@ -276,15 +317,102 @@ header nav li a {
   height: auto;
 }
 
-#overview .ideal-painting .txt h2 {
-  font-size: 35px;
-  font-weight: 400;
-  padding-bottom: 20px;
+#ai {
+  position: relative;
+  height: calc(800px + 30px);
+}
+#ai .txt {
+  color: #00001a;
+}
+#ai img {
+  position: absolute;
+  bottom: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: auto;
 }
 
-#overview .ideal-painting .txt p {
-  padding-bottom: 30px;
-  font-size: 18px;
+.parallax {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-attachment: fixed;
+  font-size: 0;
+}
+.parallax img {
+  width: 100%;
+  height: auto;
+  visibility: hidden;
+}
+.parallax#parallax1 {
+  background-image: url(../img/parallax1.jpg);
+}
+.parallax#parallax2 {
+  background-image: url(../img/parallax2.jpg);
+}
+
+#grey-section {
+  width: 100%;
+  background-color: #222222;
+}
+#grey-section .flexible-photo img {
+  width: 70%;
+  height: auto;
+  margin: 30px 0;
+}
+#grey-section .row#brushes {
+  flex-direction: row-reverse;
+}
+#grey-section .row#brushes .txt {
+  padding-left: 40px;
+}
+#grey-section .row#experiment .txt {
+  padding-right: 40px;
+}
+
+#tools-effects {
+  background-color: #fff;
+  width: 100%;
+  padding: 50px 0 40px 0;
+}
+#tools-effects h2 {
+  text-align: center;
+  padding: 20px 0 40px 0;
+}
+
+#tools-effects > .images {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#tools-effects > .images .single-img {
+  width: 220px;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+}
+#tools-effects > .images .single-img:hover img {
+  transform: scale(1.1);
+}
+#tools-effects > .images .single-img img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.6s ease;
+}
+#tools-effects > .images .single-img h4 {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 20px;
+  white-space: nowrap;
+  font-weight: 400;
 }
 
 body {

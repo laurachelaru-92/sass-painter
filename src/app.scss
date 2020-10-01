@@ -6,27 +6,18 @@ padding: 0;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import "Partials/_mixins.scss";
+@import "Partials/_variables.scss";
+@import "Partials/_extensions.scss";
 @import "Partials/_navbar.scss";
 @import "Partials/_jumbotron.scss";
 @import "Partials/_overview.scss";
+@import "Partials/_ai.scss";
+@import "Partials/_parallaxes.scss";
+@import "Partials/_grey-section.scss";
+@import "Partials/_tools-effects.scss";
 // fine default e import
 
-// Variabili
-$containerWidth : 80%;
-// fine variabili
-
-// Estensioni
-%sectionH2 {
-  font-size: 35px;
-  font-weight: 400;
-  padding-bottom: 20px;
-}
-
-%sectionP {
-  padding-bottom: 30px;
-  font-size: 18px;
-}
-// fine estensioni
 
 // Generiche, body e container
 body {

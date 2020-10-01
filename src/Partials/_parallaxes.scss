@@ -1,0 +1,22 @@
+.parallax {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-attachment: fixed;
+  font-size: 0;
+
+  img {
+    width: 100%;
+    height: auto;
+    visibility: hidden;
+  }
+
+  &#parallax1 {
+    background-image: url(../img/parallax1.jpg);
+  }
+
+  &#parallax2 {
+    background-image: url(../img/parallax2.jpg);
+  }
+}

@@ -37,7 +37,7 @@
 }
 
 #overview .ideal-painting {
-  height: 800px;
+  height: #{$sectionH};
   background-image: url("../img/overview-bg.jpg");
   margin-top: 70px;
   background-repeat: no-repeat;
@@ -46,11 +46,7 @@
   position: relative;
 
   .txt {
-    color: #fff;
-    width: 60%;
-    text-align: center;
-    margin: auto;
-    padding: 30px 0;
+    @extend %sectionTxt;
 
     h2 {
       @extend %sectionH2;

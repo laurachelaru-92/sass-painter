@@ -1,8 +1,3 @@
-// Variabili
-$jumbotronH: "500px";
-// fine variabili
-
-
 .jumbotron {
   position: relative;
   height: #{$jumbotronH};
@@ -111,6 +106,10 @@ $jumbotronH: "500px";
       padding: 10px 40px;
       background-color: #28ACFF;
       text-transform: uppercase;
+
+      &:hover {
+        background-color: #4dbbff;
+      }
     }
   }
 
