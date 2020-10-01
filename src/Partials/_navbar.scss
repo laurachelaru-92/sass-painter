@@ -9,7 +9,7 @@
 }
 
 @mixin slowTransition {
-  transition: all 0.4 ease;
+  transition: all 0.4s ease;
 }
 // fine mixins
 
@@ -63,11 +63,11 @@ header nav {
 .bottom-nav ul {
   @include listReset;
   justify-content: flex-start;
+  height: 50px;
+  line-height: 50px;
 
   li {
-    @include slowTransition;
-    height: 50px;
-    line-height: 50px;
+    height: 100%;
 
     a {
       display: inline-block;
@@ -76,20 +76,26 @@ header nav {
       white-space: nowrap;
       height: 100%;
       padding: 0 10px;
+      @include slowTransition;
     }
 
-    &:not(:first-child):hover a{
-      background-color: #fff;
-      color: #000;
+    &:not(:first-child):hover {
+
+      a {
+        background-color: #fff;
+        color: #000;
+      }
     }
-  }
 
-  #logo {
-    margin-right: 25px;
+    &#logo {
+      margin-right: 25px;
 
-    img {
-      height: 30px;
-      width: auto;
+      img {
+        height: 30px;
+        width: auto;
+        position: relative;
+        top: 5px;
+      }
     }
   }
 }

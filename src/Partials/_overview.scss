@@ -1,3 +1,7 @@
+#overview {
+  background-color: #101010;
+}
+
 #overview nav {
   background-color: #E6E6E6;
 
@@ -28,6 +32,64 @@
           background-color: #EEEEEE;
         }
       }
+    }
+  }
+}
+
+#overview .ideal-painting {
+  height: 800px;
+  background-image: url("../img/overview-bg.jpg");
+  margin-top: 70px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+
+  .txt {
+    color: #fff;
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    padding: 30px 0;
+
+    h2 {
+      @extend %sectionH2;
+    }
+
+    p {
+      @extend %sectionP;
+    }
+
+    a {
+      @include linkReset;
+      color: #fff;
+      font-size: 18px;
+
+      img {
+        vertical-align: middle;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .screen {
+    width: 70%;
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0;
+    background-image: url("../img/overview-intro.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center bottom;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+
+    img {
+      width: 100%;
+      height: auto;
     }
   }
 }

@@ -1,6 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Lato:wght@300;
-
-400;700;900&display=swap);* {
+@import url(https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap);* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -10,11 +8,9 @@ header nav {
   background-color: #000;
   height: 100%;
 }
-
 header nav li {
   display: inline-block;
 }
-
 header nav li a {
   text-decoration: none;
 }
@@ -23,28 +19,23 @@ header nav li a {
   padding: 10px 0;
   align-items: center;
 }
-
 .top-nav ul {
   list-style: none;
   display: flex;
   justify-content: flex-end;
 }
-
 .top-nav ul li {
   margin-left: 20px;
 }
-
 .top-nav ul li a {
   color: grey;
-  transition: all 0.4 ease;
+  transition: all 0.4s ease;
   font-size: 12px;
 }
-
 .top-nav ul li a:hover {
   color: #fff;
   text-decoration: underline;
 }
-
 .top-nav ul li a i {
   padding-right: 5px;
   color: #009CFF;
@@ -54,14 +45,12 @@ header nav li a {
   list-style: none;
   display: flex;
   justify-content: flex-start;
-}
-
-.bottom-nav ul li {
-  transition: all 0.4 ease;
   height: 50px;
   line-height: 50px;
 }
-
+.bottom-nav ul li {
+  height: 100%;
+}
 .bottom-nav ul li a {
   display: inline-block;
   color: #fff;
@@ -69,28 +58,31 @@ header nav li a {
   white-space: nowrap;
   height: 100%;
   padding: 0 10px;
+  transition: all 0.4s ease;
 }
-
 .bottom-nav ul li:not(:first-child):hover a {
   background-color: #fff;
   color: #000;
 }
-
-.bottom-nav ul #logo {
+.bottom-nav ul li#logo {
   margin-right: 25px;
 }
-
-.bottom-nav ul #logo img {
+.bottom-nav ul li#logo img {
   height: 30px;
   width: auto;
+  position: relative;
+  top: 5px;
 }
 
 .jumbotron {
+  position: relative;
   height: 500px;
   background-color: lightgrey;
   color: #000;
-  background-image: url(/images/jumbo-bg.jpg?1ae8206f62af0c936bc2844d99e7195b);
-  position: relative;
+  background-image: url("../img/jumbo-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 45% center;
 }
 
 .jumbotron .main-text {
@@ -98,32 +90,26 @@ header nav li a {
   left: 30%;
   top: 50%;
   transform: translateY(-50%);
+  color: #fff;
 }
-
-.jumbotron .main-text h2,
-.jumbotron .main-text h3,
-.jumbotron .main-text ul {
+.jumbotron .main-text h2, .jumbotron .main-text h3, .jumbotron .main-text ul {
   padding-bottom: 20px;
 }
-
 .jumbotron .main-text h2 {
   font-size: 35px;
 }
-
 .jumbotron .main-text h3 {
   font-size: 25px;
 }
-
 .jumbotron .main-text ul {
   list-style: none;
 }
-
 .jumbotron .main-text ul li {
   padding-bottom: 10px;
 }
-
 .jumbotron .main-text ul li i {
   padding-right: 5px;
+  color: grey;
 }
 
 .jumbotron .btn {
@@ -132,23 +118,23 @@ header nav li a {
   align-items: center;
   padding: 10px;
   background-color: grey;
+  cursor: pointer;
 }
-
+.jumbotron .btn:hover {
+  background-color: #737373;
+}
 .jumbotron .btn .txt {
-  border-right: 1px solid #000;
+  border-right: 1px solid #fff;
   padding: 0 20px 0 5px;
 }
-
 .jumbotron .btn .txt h4 {
   text-transform: uppercase;
   font-size: 15px;
 }
-
 .jumbotron .btn .txt p {
   font-size: 13px;
   padding-top: 3px;
 }
-
 .jumbotron .btn i {
   font-size: 25px;
   padding: 0 10px 0 20px;
@@ -156,61 +142,82 @@ header nav li a {
 
 .jumbotron .buy {
   background-color: #000;
-  width: 25%;
+  width: 30%;
   display: inline-block;
   position: absolute;
   top: 20px;
-  right: 10%;
+  right: 5%;
   height: calc(100% - 20px);
   color: #fff;
   padding: 20px;
 }
-
-.jumbotron .buy p {
-  font-size: 12px;
+.jumbotron .buy > h3 {
+  font-size: 25px;
   margin-top: 30px;
 }
-
-.jumbotron .buy h4 {
+.jumbotron .buy > h4 {
   text-transform: uppercase;
+  color: grey;
+  font-size: 15px;
   margin: 20px 0 30px 0;
 }
-
 .jumbotron .buy a {
   text-decoration: none;
+}
+.jumbotron .buy a.buy-now {
   color: #fff;
   padding: 10px 40px;
   background-color: #28ACFF;
   text-transform: uppercase;
 }
-
 .jumbotron .buy img {
   position: absolute;
   top: 20px;
   right: 5px;
 }
+.jumbotron .buy .limited {
+  margin-top: 50px;
+  background-color: #fff;
+  color: #000;
+  padding: 15px;
+  cursor: pointer;
+}
+.jumbotron .buy .limited:hover a.learn-more {
+  text-decoration: underline;
+}
+.jumbotron .buy .limited h4 {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.jumbotron .buy .limited p {
+  font-size: 14px;
+  padding: 10px 0;
+}
+.jumbotron .buy .limited a.learn-more {
+  color: #28ACFF;
+}
+
+#overview {
+  background-color: #101010;
+}
 
 #overview nav {
   background-color: #E6E6E6;
 }
-
 #overview nav ul {
   list-style: none;
   display: flex;
   height: 60px;
   line-height: 60px;
 }
-
 #overview nav ul li {
   height: 100%;
 }
-
 #overview nav ul li:first-child {
   padding: 0 30px;
   border-bottom: 2px solid #000;
   background-color: #fff;
 }
-
 #overview nav ul li a {
   text-decoration: none;
   color: grey;
@@ -220,9 +227,64 @@ header nav li a {
   width: 100%;
   padding: 0 30px;
 }
-
 #overview nav ul li a:hover {
   background-color: #EEEEEE;
+}
+
+#overview .ideal-painting {
+  height: 800px;
+  background-image: url("../img/overview-bg.jpg");
+  margin-top: 70px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+#overview .ideal-painting .txt {
+  color: #fff;
+  width: 60%;
+  text-align: center;
+  margin: auto;
+  padding: 30px 0;
+}
+#overview .ideal-painting .txt a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+#overview .ideal-painting .txt a img {
+  vertical-align: middle;
+  margin-right: 20px;
+}
+#overview .ideal-painting .screen {
+  width: 70%;
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0;
+  background-image: url("../img/overview-intro.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center bottom;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+#overview .ideal-painting .screen img {
+  width: 100%;
+  height: auto;
+}
+
+#overview .ideal-painting .txt h2 {
+  font-size: 35px;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+
+#overview .ideal-painting .txt p {
+  padding-bottom: 30px;
+  font-size: 18px;
 }
 
 body {
@@ -233,4 +295,3 @@ body {
   width: 80%;
   margin: auto;
 }
-
