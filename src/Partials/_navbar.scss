@@ -42,42 +42,130 @@ header nav {
   }
   }
 
-.bottom-nav ul {
+
+.bottom-nav > ul {
   @include listReset;
   justify-content: flex-start;
-  height: 50px;
-  line-height: 50px;
+  flex-wrap: wrap;
+  align-items: center;
 
-  li {
-    height: 100%;
+  > li {
+    position: relative;
 
     a {
       display: inline-block;
       color: #fff;
-      font-size: 15px;
+      font-size: 13px;
       white-space: nowrap;
-      height: 100%;
-      padding: 0 10px;
+      padding: 20px;
       @include slowTransition;
-    }
 
-    &:not(:first-child):hover {
-
-      a {
-        background-color: #fff;
-        color: #000;
+      i {
+        font-size: 12px;
+        padding-left: 4px;
+        color: grey;
       }
     }
 
     &#logo {
       margin-right: 25px;
 
-      img {
-        height: 30px;
-        width: auto;
-        position: relative;
-        top: 5px;
+      a {
+        padding: 0;
+
+        img {
+          height: 25px;
+          width: auto;
+        }
       }
     }
   }
+}
+
+
+// Visualizzazione dei sub-menu e dei subsub-menu
+ul.sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  background-color: #F1F1F1;
+
+  > li {
+    width: 100%;
+    position: relative;
+    white-space: nowrap;
+
+    &:hover {
+
+      > .subsub-menu {
+        display: block;
+      }
+    }
+
+    > a {
+      @include linkReset;
+      color: #000;
+      width: 100%;
+      padding-right: 50px;
+
+      &:hover {
+        background-color: #D6D6D6;
+
+        i {
+          color: #000;
+          font-size: 14px;
+        }
+      }
+
+      i {
+        color: #D6D6D6;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+      }
+    }
+
+
+    .subsub-menu {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      z-index: 999;
+      background-color: #F1F1F1;
+
+      > li {
+        display: block;
+
+        h4 {
+          padding: 0 20px;
+          border-top: 1px solid #d9d9d9;
+        }
+
+        > a {
+          @include linkReset;
+          color: #000;
+          width: 100%;
+
+          &:hover {
+            background-color: #D6D6D6;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bottom-nav > ul > li:not(:first-child):hover {
+  > a {
+    background-color: #F1F1F1;
+    color: #000;
+  }
+
+  > .sub-menu {
+    display: block;
+  }
+
 }

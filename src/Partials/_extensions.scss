@@ -24,6 +24,12 @@
   justify-content: center;
   align-items: center;
   padding: 50px 0;
+
+  // Media queries
+  @media screen and (max-width: 678px) {
+    display: block;
+    text-align: center;
+  }
 }
 
 %greySectTxt {
@@ -39,9 +45,28 @@
     font-size: 18px;
     line-height: 25px;
   }
+
+  // Media queries
+  // Media queries
+  @media screen and (max-width: 768px) {
+    h3 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
 }
 
 %greySectImg {
   flex-basis: 60%;
   height: auto;
+
+
+  // Media queries
+  @media screen and (max-width: 678px) {
+    width: 50%;
+    padding-top: 20px;
+  }
 }

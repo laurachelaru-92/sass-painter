@@ -7,6 +7,7 @@
     @extend %sectionH2;
     text-align: center;
     padding: 20px 0 40px 0;
+    color: #333333;
   }
 }
 
@@ -18,11 +19,19 @@
   flex-wrap: wrap;
 
   .single-img {
-    width: 220px;
-    height: 220px;
+    width: 240px;
+    height: 240px;
     position: relative;
     overflow: hidden;
     margin: 10px;
+
+    &:first-child {
+      margin: 10px 10px 10px 0;
+    }
+
+    &:last-child {
+      margin: 10px 0 10px 10px;
+    }
 
     &:hover {
       img {

@@ -31,21 +31,26 @@
       @extend %greySectImg;
     }
 
-  &#brushes {
-    flex-direction: row-reverse;
+    &#brushes {
+      flex-direction: row-reverse;
 
-    .txt {
-      padding-left: 40px;
-    }
+      .txt {
+        padding-left: 40px;
 
+        // Media queries
+        @media screen and (max-width: 678px) {
+          padding: 0;
+        }
+      }
+     }
 
-
-
-   }
-
-   &#experiment .txt {
+    &#experiment .txt {
      padding-right: 40px;
-   }
- }
 
+    // Media queries
+     @media screen and (max-width: 678px) {
+       padding: 0;
+     }
+   }
+  }
 }

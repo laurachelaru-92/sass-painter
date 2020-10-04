@@ -1,6 +1,16 @@
 #ai {
   position: relative;
-  height: calc(#{$sectionH} + 30px);
+  height: calc(#{$sectionH} + 50px);
+
+  // Media queries
+  @media screen and (max-width: 1024px) {
+    height: calc(#{$sectionH});
+  }
+  @media screen and (max-width: 768px) {
+    height: calc(#{$sectionH} - 100px);
+  }
+
+
 
   .txt {
     @extend %sectionTxt;

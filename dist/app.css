@@ -30,6 +30,12 @@
   align-items: center;
   padding: 50px 0;
 }
+@media screen and (max-width: 678px) {
+  #grey-section .row {
+    display: block;
+    text-align: center;
+  }
+}
 
 #grey-section .row .txt {
   flex-basis: 40%;
@@ -43,10 +49,24 @@
   font-size: 18px;
   line-height: 25px;
 }
+@media screen and (max-width: 768px) {
+  #grey-section .row .txt h3 {
+    font-size: 20px;
+  }
+  #grey-section .row .txt p {
+    font-size: 15px;
+  }
+}
 
 #grey-section .row img {
   flex-basis: 60%;
   height: auto;
+}
+@media screen and (max-width: 678px) {
+  #grey-section .row img {
+    width: 50%;
+    padding-top: 20px;
+  }
 }
 
 header nav {
@@ -86,37 +106,105 @@ header nav li a {
   color: #009CFF;
 }
 
-.bottom-nav ul {
+.bottom-nav > ul {
   list-style: none;
   display: flex;
   justify-content: flex-start;
-  height: 50px;
-  line-height: 50px;
+  flex-wrap: wrap;
+  align-items: center;
 }
-.bottom-nav ul li {
-  height: 100%;
+.bottom-nav > ul > li {
+  position: relative;
 }
-.bottom-nav ul li a {
+.bottom-nav > ul > li a {
   display: inline-block;
   color: #fff;
-  font-size: 15px;
+  font-size: 13px;
   white-space: nowrap;
-  height: 100%;
-  padding: 0 10px;
+  padding: 20px;
   transition: all 0.4s ease;
 }
-.bottom-nav ul li:not(:first-child):hover a {
-  background-color: #fff;
-  color: #000;
+.bottom-nav > ul > li a i {
+  font-size: 12px;
+  padding-left: 4px;
+  color: grey;
 }
-.bottom-nav ul li#logo {
+.bottom-nav > ul > li#logo {
   margin-right: 25px;
 }
-.bottom-nav ul li#logo img {
-  height: 30px;
+.bottom-nav > ul > li#logo a {
+  padding: 0;
+}
+.bottom-nav > ul > li#logo a img {
+  height: 25px;
   width: auto;
+}
+
+ul.sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  background-color: #F1F1F1;
+}
+ul.sub-menu > li {
+  width: 100%;
   position: relative;
-  top: 5px;
+  white-space: nowrap;
+}
+ul.sub-menu > li:hover > .subsub-menu {
+  display: block;
+}
+ul.sub-menu > li > a {
+  text-decoration: none;
+  color: #000;
+  width: 100%;
+  padding-right: 50px;
+}
+ul.sub-menu > li > a:hover {
+  background-color: #D6D6D6;
+}
+ul.sub-menu > li > a:hover i {
+  color: #000;
+  font-size: 14px;
+}
+ul.sub-menu > li > a i {
+  color: #D6D6D6;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+ul.sub-menu > li .subsub-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 999;
+  background-color: #F1F1F1;
+}
+ul.sub-menu > li .subsub-menu > li {
+  display: block;
+}
+ul.sub-menu > li .subsub-menu > li h4 {
+  padding: 0 20px;
+  border-top: 1px solid #d9d9d9;
+}
+ul.sub-menu > li .subsub-menu > li > a {
+  text-decoration: none;
+  color: #000;
+  width: 100%;
+}
+ul.sub-menu > li .subsub-menu > li > a:hover {
+  background-color: #D6D6D6;
+}
+
+.bottom-nav > ul > li:not(:first-child):hover > a {
+  background-color: #F1F1F1;
+  color: #000;
+}
+.bottom-nav > ul > li:not(:first-child):hover > .sub-menu {
+  display: block;
 }
 
 .jumbotron {
@@ -251,6 +339,15 @@ header nav li a {
 
 #overview nav {
   background-color: #E6E6E6;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+@media screen and (max-width: 1024px) {
+  #overview nav .container {
+    width: 100%;
+  }
 }
 #overview nav ul {
   list-style: none;
@@ -266,6 +363,11 @@ header nav li a {
   border-bottom: 2px solid #000;
   background-color: #fff;
 }
+@media screen and (max-width: 1024px) {
+  #overview nav ul li:first-child {
+    padding: 0 10px;
+  }
+}
 #overview nav ul li a {
   text-decoration: none;
   color: grey;
@@ -274,6 +376,11 @@ header nav li a {
   height: 100%;
   width: 100%;
   padding: 0 30px;
+}
+@media screen and (max-width: 768px) {
+  #overview nav ul li a {
+    padding: 0 10px;
+  }
 }
 #overview nav ul li a:hover {
   background-color: #EEEEEE;
@@ -287,6 +394,17 @@ header nav li a {
   background-size: cover;
   background-position: center center;
   position: relative;
+}
+@media screen and (max-width: 1024px) {
+  #overview .ideal-painting {
+    height: calc(800px - 100px);
+  }
+}
+@media screen and (max-width: 768px) {
+  #overview .ideal-painting {
+    height: calc(800px - 150px);
+    margin-top: 40px;
+  }
 }
 #overview .ideal-painting .txt a {
   text-decoration: none;
@@ -319,7 +437,17 @@ header nav li a {
 
 #ai {
   position: relative;
-  height: calc(800px + 30px);
+  height: calc(800px + 50px);
+}
+@media screen and (max-width: 1024px) {
+  #ai {
+    height: calc(800px);
+  }
+}
+@media screen and (max-width: 768px) {
+  #ai {
+    height: calc(800px - 100px);
+  }
 }
 #ai .txt {
   color: #00001a;
@@ -368,8 +496,18 @@ header nav li a {
 #grey-section .row#brushes .txt {
   padding-left: 40px;
 }
+@media screen and (max-width: 678px) {
+  #grey-section .row#brushes .txt {
+    padding: 0;
+  }
+}
 #grey-section .row#experiment .txt {
   padding-right: 40px;
+}
+@media screen and (max-width: 678px) {
+  #grey-section .row#experiment .txt {
+    padding: 0;
+  }
 }
 
 #tools-effects {
@@ -380,6 +518,7 @@ header nav li a {
 #tools-effects h2 {
   text-align: center;
   padding: 20px 0 40px 0;
+  color: #333333;
 }
 
 #tools-effects > .images {
@@ -390,11 +529,17 @@ header nav li a {
   flex-wrap: wrap;
 }
 #tools-effects > .images .single-img {
-  width: 220px;
-  height: 220px;
+  width: 240px;
+  height: 240px;
   position: relative;
   overflow: hidden;
   margin: 10px;
+}
+#tools-effects > .images .single-img:first-child {
+  margin: 10px 10px 10px 0;
+}
+#tools-effects > .images .single-img:last-child {
+  margin: 10px 0 10px 10px;
 }
 #tools-effects > .images .single-img:hover img {
   transform: scale(1.1);
@@ -413,6 +558,132 @@ header nav li a {
   font-size: 20px;
   white-space: nowrap;
   font-weight: 400;
+}
+
+#additional-explore {
+  width: 100%;
+  background-image: url(../img/additional-explore-bg.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 100px 0;
+}
+#additional-explore #additional {
+  margin-right: 30px;
+}
+@media screen and (max-width: 768px) {
+  #additional-explore #additional {
+    margin: 0 0 30px 0;
+  }
+}
+#additional-explore > div {
+  width: 500px;
+  background-color: #fff;
+  padding: 70px 40px;
+  text-align: center;
+  color: #333333;
+}
+#additional-explore > div h2 {
+  font-size: 25px;
+  font-weight: 400;
+  padding-bottom: 30px;
+}
+#additional-explore > div p {
+  font-size: 18px;
+  line-height: 30px;
+}
+#additional-explore > div p a {
+  text-decoration: none;
+  color: #28ACFF;
+}
+#additional-explore > div p a:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 768px) {
+  #additional-explore {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.footer-top {
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 50px 0 20px 0;
+  background-color: #ECECEC;
+}
+.footer-top .container {
+  width: 85%;
+  display: flex;
+  align-items: baseline;
+}
+.footer-top .container > ul {
+  list-style: none;
+  width: calc(100% / 4);
+}
+.footer-top .container > ul h4 {
+  font-weight: 400;
+  font-size: 15px;
+  padding-bottom: 15px;
+  color: #333333;
+}
+.footer-top .container > ul > li {
+  padding-bottom: 5px;
+}
+.footer-top .container > ul > li a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #333333;
+}
+.footer-top .container > ul > li a:hover {
+  text-decoration: underline;
+}
+.footer-top .container > ul > li ul.socials {
+  margin-top: 20px;
+  list-style: none;
+  display: flex;
+}
+.footer-top .container > ul > li ul.socials img {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.footer-bottom {
+  background-color: #1E1E1E;
+  padding: 20px 0;
+}
+.footer-bottom .container {
+  width: 85%;
+}
+.footer-bottom .container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.footer-bottom .container ul {
+  list-style: none;
+  display: flex;
+}
+.footer-bottom .container ul.footer-left {
+  float: left;
+}
+.footer-bottom .container ul.footer-right {
+  float: right;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 13px;
+}
+.footer-bottom .container ul.footer-right a {
+  text-decoration: none;
+  color: grey;
+}
+.footer-bottom .container ul.footer-right a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.footer-bottom .container ul li {
+  padding: 0 10px;
 }
 
 body {
