@@ -16,6 +16,14 @@
   transform: translateY(-50%);
   color: #fff;
 
+  @media screen and (max-width: 1024px) {
+    left: 20%;
+  }
+
+  @media screen and (max-width: 768px) {
+    left: 10%;
+  }
+
   h2, h3, ul {
     padding-bottom: 20px;
   }

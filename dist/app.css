@@ -225,6 +225,16 @@ ul.sub-menu > li .subsub-menu > li > a:hover {
   transform: translateY(-50%);
   color: #fff;
 }
+@media screen and (max-width: 1024px) {
+  .jumbotron .main-text {
+    left: 20%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .jumbotron .main-text {
+    left: 10%;
+  }
+}
 .jumbotron .main-text h2, .jumbotron .main-text h3, .jumbotron .main-text ul {
   padding-bottom: 20px;
 }
